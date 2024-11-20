@@ -1,4 +1,6 @@
-import requests, time, re, json, os
+import requests
+import time
+import re
 from random import randint
  
 headers = {
@@ -33,7 +35,7 @@ def login(user, password):
     # print(location)
     try:
         code = get_code(location)
-    except:
+    except Exception:
         return 0, 0
     print("access_code获取成功")
     print(code)
